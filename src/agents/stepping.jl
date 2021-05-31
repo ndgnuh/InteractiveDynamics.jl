@@ -123,7 +123,7 @@ function modellims(model)
 end
 
 function user_used_polygons(am, markers)
-    if isempty(markers)
+    if isempty(markers[])
         return false
     elseif (am isa Polygon)
         return true
