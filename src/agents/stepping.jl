@@ -123,7 +123,9 @@ function modellims(model)
 end
 
 function user_used_polygons(am, markers)
-    if (am isa Polygon)
+    if isempty(markers)
+        return false
+    elseif (am isa Polygon)
         return true
     elseif (am isa Function) && (markers[][1] isa Polygon)
         return true
